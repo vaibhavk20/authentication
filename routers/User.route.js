@@ -91,7 +91,7 @@ userRouter.post("/login", async (req, res) => {
         },
         process.env.key
       );
-      res.status(200).send({ token: token });
+      res.status(200).send({ token: token, email });
     } else {
       res.status(400).send("Invalid Credentials");
     }
